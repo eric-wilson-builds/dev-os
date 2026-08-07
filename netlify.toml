@@ -1,11 +1,12 @@
 [build]
   base = "contractiq"
   command = "npm run build"
-  publish = ".next"
+  functions = ".next/server"
+  publish = ".next/static"
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api:splat"
+  to = "/.netlify/functions/:splat"
   status = 200
 
 [[redirects]]
